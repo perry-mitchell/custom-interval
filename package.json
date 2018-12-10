@@ -4,7 +4,8 @@
   "description": "Customisable setInterval with variating delay",
   "main": "source/index.js",
   "scripts": {
-    "test": "npm run test:specs",
+    "test": "npm run test:specs && npm run test:coverage",
+    "test:coverage": "nyc check-coverage --lines 100 --functions 100 --branches 100 --statements 100",
     "test:specs": "nyc mocha -r tests/index.js 'tests/specs/**/*.spec.js'"
   },
   "repository": {

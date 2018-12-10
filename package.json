@@ -1,0 +1,35 @@
+{
+  "name": "custom-interval",
+  "version": "0.1.0",
+  "description": "Customisable setInterval with variating delay",
+  "main": "source/index.js",
+  "scripts": {
+    "test": "npm run test:specs",
+    "test:specs": "nyc mocha -r tests/index.js 'tests/specs/**/*.spec.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perry-mitchell/custom-interval.git"
+  },
+  "keywords": [
+    "timer",
+    "interval",
+    "custom",
+    "timeout",
+    "settimeout",
+    "setinterval"
+  ],
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perry-mitchell/custom-interval/issues"
+  },
+  "homepage": "https://github.com/perry-mitchell/custom-interval#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "sinon": "^7.2.0",
+    "sleep-promise": "^8.0.1"
+  }
+}

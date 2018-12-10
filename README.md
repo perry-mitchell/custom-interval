@@ -1,6 +1,8 @@
 # Custom-Interval
 > Customisable setInterval with variating delay and immediate execution (optional)
 
+[![Build Status](https://travis-ci.org/perry-mitchell/custom-interval.svg?branch=master)](https://travis-ci.org/perry-mitchell/custom-interval)
+
 `npm install custom-interval --save`
 
 ## Usage

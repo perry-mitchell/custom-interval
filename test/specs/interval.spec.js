@@ -1,5 +1,10 @@
 const sleep = require("sleep-promise");
-const { clearCustomInterval, expandIntervals, setCustomInterval, shiftInterval } = require("../../source/interval.js");
+const {
+    clearCustomInterval,
+    expandIntervals,
+    setCustomInterval,
+    shiftInterval
+} = require("../../source/interval.js");
 
 describe("interval", function() {
     describe("expandIntervals", function() {
@@ -42,21 +47,19 @@ describe("interval", function() {
         it("can fire a callback immediately", function() {
             const spy = sinon.spy();
             const interval = setCustomInterval(spy, 150, { immediate: true });
-            return sleep(1)
-                .then(() => {
-                    expect(spy.calledOnce).to.be.true;
-                    clearCustomInterval(interval);
-                });
+            return sleep(1).then(() => {
+                expect(spy.calledOnce).to.be.true;
+                clearCustomInterval(interval);
+            });
         });
 
         it("changes the delay over time", function() {
             const spy = sinon.spy();
             const interval = setCustomInterval(spy, ["2x50", 75, 125]);
-            return sleep(360)
-                .then(() => {
-                    expect(spy.callCount).to.equal(4);
-                    clearCustomInterval(interval);
-                });
+            return sleep(360).then(() => {
+                expect(spy.callCount).to.equal(4);
+                clearCustomInterval(interval);
+            });
         });
     });
 
